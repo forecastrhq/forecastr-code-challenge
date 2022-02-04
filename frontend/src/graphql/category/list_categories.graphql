@@ -1,0 +1,11 @@
+query ListCategories {
+  listCategories {
+		id
+    name
+    products {
+      id
+      name
+      description
+    }
+  }
+}
