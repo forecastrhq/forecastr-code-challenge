@@ -44,4 +44,22 @@ Always remember to check the package.json file for extra scripts and libraries.
 
 ## Challenge
 
-TBD
+It was summer, Lucy (our protagonist) saw a beautiful toy, but she had no money to buy it.
+At that moment, Lucy remembered that her neighbors were talking with each other how thirsty they become during the hot summer days.
+
+With that idea in mind, she decided to build a Juice Vending Stop.
+As you can imagine, it became a hit on her street, everyone wanted to buy Lucy's products. Her business grew so much that she wasn't expecting that and now she has some problems organizing it.
+
+Your goal is to help Lucy organize her business.
+She asked her older brother, who is on the tech school, to build her a dashboard so she could check information about her vending, but he didn't have much time, so he delivered only basic funcionalities to his little sister. Since she needs more, she's asking for you help!
+
+### What Lucy needs?
+- She needs a way to add new products to her store. [Add a functionality to add new products]
+- Also, she want to have a place to register the sales. [Add a functionality to add new sales]
+- And if a price changes? Lucy would love to have a place where she can edit the items. [Add a functionality to edit actual products]
+- But if she did a mistake? An undo will be great! [Add a remove functionality to both products and sales]
+
+### Optional
+- The actual layout is not good, give your touch to it!
+- Lucy: "Is there a way that I can see a graph about the sales?"
+- What else you find that Lucy will be happy to have?
