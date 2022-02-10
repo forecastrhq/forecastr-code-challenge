@@ -1,7 +1,7 @@
 # Forecastr Code Challenge
 
 Welcome to the Forecastr Code Challenge.
-In this challenge, you'll help Trisha with her vending point.
+In this challenge, you'll help Lucy with her vending point.
 
 ## Installation
 
