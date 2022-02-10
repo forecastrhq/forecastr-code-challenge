@@ -3,6 +3,7 @@ import React from 'react'
 import { Box, Table, TableCaption, Tbody, Td, Text, Th, Thead, Tr, VStack } from '@chakra-ui/react'
 
 import { useProduct } from './contexts/products_context'
+import formatPrice from './utils/formatPrice'
 
 function App() {
   const [productState] = useProduct()
@@ -20,20 +21,24 @@ function App() {
                 <Th>Item</Th>
                 <Th>Description</Th>
                 <Th>Price</Th>
+                <Th>Cost</Th>
               </Tr>
             </Thead>
             <Tbody>
               {allProducts &&
-                allProducts?.map(({ id, name, description, price }) => {
+                allProducts?.map(({ id, name, description, price, cost }) => {
+                  const productPrice = formatPrice(price)
+                  const productCost = formatPrice(cost)
+
                   return (
                     <Tr key={id}>
                       <Td>{name}</Td>
                       <Td>{description}</Td>
                       <Td>
-                        {new Intl.NumberFormat('en-US', {
-                          style: 'currency',
-                          currency: 'USD',
-                        }).format(price)}
+                        {productPrice}
+                      </Td>
+                      <Td>
+                        {productCost}
                       </Td>
                     </Tr>
                   )

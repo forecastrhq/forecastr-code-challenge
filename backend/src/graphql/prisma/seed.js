@@ -29,11 +29,13 @@ const startSeeding = async () => {
           name: 'Lemonade Juice',
           description: 'Lemonade Juice in a Jar - 22oz',
           price: 5.50,
+          cost: 1.50,
         },
         {
           name: 'Orange Juice',
           description: 'Orange Juice in a Jar - 22oz',
           price: 6.50,
+          cost: 1.75
         }]
       }
     }

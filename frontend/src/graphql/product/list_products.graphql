@@ -4,6 +4,7 @@ query ListProducts {
     name
     description
     price
+    cost
     category {
       name
     }

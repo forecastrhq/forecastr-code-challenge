@@ -24,6 +24,9 @@ type Product {
   """Category Id @relation"""
   categoryId: String
 
+  """Product production cost"""
+  cost: Float
+
   """Product description string"""
   description: String
 

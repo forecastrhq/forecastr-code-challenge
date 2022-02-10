@@ -7,6 +7,7 @@ const Product = objectType({
     t.nullable.string('name', { description: 'Product name string' }),
     t.nullable.string('description', { description: 'Product description string' })
     t.nullable.float('price', { description: 'Product price value' })
+    t.nullable.float('cost', { description: 'Product production cost' })
     t.nullable.field('category', { type: 'Category', description: 'Product category' })
     t.nullable.string('categoryId', { description: 'Category Id @relation'})
   }

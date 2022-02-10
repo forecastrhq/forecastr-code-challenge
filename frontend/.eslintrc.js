@@ -104,6 +104,7 @@ module.exports = {
       ],
       rules: {
         semi: 'off',
+        'prettier/prettier': 1,
         'react/react-in-jsx-scope': 'off',
         'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
         'consistent-return': 'warn',

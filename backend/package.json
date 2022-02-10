@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon -L --exec babel-node src/index.js",
     "generate": "prisma generate",
-    "migrate": "prisma migrate --name init",
+    "migrate": "prisma migrate dev --name init",
     "setup": "run-s generate migrate",
     "reset": "prisma migrate reset"
   },
