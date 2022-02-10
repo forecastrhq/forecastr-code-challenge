@@ -4,10 +4,11 @@ module.exports = {
   root: true,
   env: { browser: true, es6: true, node: true },
   globals: { Atomics: 'readonly', SharedArrayBuffer: 'readonly' },
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaFeatures: { jsx: true },
     ecmaVersion: 2021,
+    requireConfigFile: false,
     sourceType: 'module',
   },
   plugins: ['eslint-plugin-import-helpers', 'react', 'react-hooks', 'prettier'],
@@ -94,7 +95,7 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         // 'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'airbnb-typescript',
-        'airbnb/hooks',
+        //'airbnb/hooks',
         'react-app',
         'plugin:jsx-a11y/recommended',
         'plugin:react/recommended',
@@ -103,6 +104,8 @@ module.exports = {
       ],
       rules: {
         semi: 'off',
+        'react/react-in-jsx-scope': 'off',
+        'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
         'consistent-return': 'warn',
         'no-alert': 'off',
 

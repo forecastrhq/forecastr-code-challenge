@@ -1,5 +1,8 @@
-import { Box, Table, TableCaption, Tbody, Td, Text, Th, Thead, Tr, VStack } from "@chakra-ui/react";
-import { useProduct } from "./contexts/products_context";
+import React from 'react'
+
+import { Box, Table, TableCaption, Tbody, Td, Text, Th, Thead, Tr, VStack } from '@chakra-ui/react'
+
+import { useProduct } from './contexts/products_context'
 
 function App() {
   const [productState] = useProduct()
@@ -11,9 +14,7 @@ function App() {
         <Text align="center">Vending Spot</Text>
         <Box>
           <Table variant="striped" colorScheme="purple">
-            <TableCaption>
-              Product List
-            </TableCaption>
+            <TableCaption>Product List</TableCaption>
             <Thead>
               <Tr>
                 <Th>Item</Th>
@@ -22,25 +23,27 @@ function App() {
               </Tr>
             </Thead>
             <Tbody>
-              {
-                allProducts && allProducts?.map(({ id, name, description, price }) => {
+              {allProducts &&
+                allProducts?.map(({ id, name, description, price }) => {
                   return (
                     <Tr key={id}>
                       <Td>{name}</Td>
                       <Td>{description}</Td>
-                      <Td>{new Intl.NumberFormat(
-                        'en-US', { style: 'currency', currency: 'USD' }
-                      ).format(price)}</Td>
+                      <Td>
+                        {new Intl.NumberFormat('en-US', {
+                          style: 'currency',
+                          currency: 'USD',
+                        }).format(price)}
+                      </Td>
                     </Tr>
                   )
-                })
-              }
+                })}
             </Tbody>
           </Table>
         </Box>
       </VStack>
     </Box>
-  );
+  )
 }
 
-export default App;
+export default App

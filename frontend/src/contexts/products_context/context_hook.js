@@ -1,6 +1,7 @@
-import { useQuery } from "@apollo/client"
-import { loader } from "graphql.macro"
-import { useEffect, useMemo } from "react"
+import { useEffect, useMemo } from 'react'
+
+import { useQuery } from '@apollo/client'
+import { loader } from 'graphql.macro'
 
 import useProductDispatch from './dispatch_hook'
 import useProductState from './state_hook'
@@ -16,13 +17,13 @@ function useProduct() {
 
   const allProducts = useMemo(
     () =>
-      listProductsQuery.loading || !listProductsQuery.data ? [] : listProductsQuery.data.listProducts,
+      listProductsQuery.loading || !listProductsQuery.data
+        ? []
+        : listProductsQuery.data.listProducts,
     [listProductsQuery.data, listProductsQuery.loading]
   )
 
-  const isLoadingProducts = useMemo(() => listProductsQuery.loading, [
-    listProductsQuery.loading,
-  ])
+  const isLoadingProducts = useMemo(() => listProductsQuery.loading, [listProductsQuery.loading])
 
   useEffect(() => {
     productDispatch({ type: 'SET_PRODUCTS', payload: allProducts })
@@ -34,7 +35,7 @@ function useProduct() {
 
   const initialData = {
     allProducts,
-    isLoadingProducts
+    isLoadingProducts,
   }
 
   const productState = useProductState(initialData)
