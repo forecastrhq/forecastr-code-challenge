@@ -30,10 +30,18 @@ model Product {
   cost        Float
   category    Category @relation(fields: [categoryId], references: [id])
   categoryId  String
+  Sales       Sales[]
 }
 
 model Category {
   id       String    @id @default(uuid())
   name     String
   products Product[]
+}
+
+model Sales {
+  id        String   @id @default(uuid())
+  salesDate DateTime
+  product   Product  @relation(fields: [productId], references: [id])
+  productId String
 }
