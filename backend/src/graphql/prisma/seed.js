@@ -23,29 +23,41 @@ const startSeeding = async () => {
     }
   })
 
-  const processedProducts = await prisma.category.create({
+  const preparedSnacks = await prisma.category.create({
     data: {
-      name: "Processed Product",
+      name: "Prepared Snacks",
       products: {
-        create: [{
-          name: 'Lemonade Juice',
-          description: 'Lemonade Juice in a Jar - 22oz',
-          price: 5.50,
-          cost: 1.50,
-        },
-        {
-          name: 'Orange Juice',
-          description: 'Orange Juice in a Jar - 22oz',
-          price: 6.50,
-          cost: 1.75
-        }]
+        create: [
+          {
+            name: 'Orange Juice',
+            description: 'Orange Juice in a Jar - 22oz',
+            price: 6.50,
+            cost: 3.50
+          },
+          {
+            name: 'Chips',
+            description: 'Small bag of generic potato chips',
+            price: 3.50,
+            cost: 1.00,
+          }
+        ]
       }
     }
   })
 
-  const rawCategory = await prisma.category.create({
+  const handmadeBeverages = await prisma.category.create({
     data: {
-      name: 'Raw Product'
+      name: 'Handmade Beverages',
+      products: {
+        create: [
+          {
+            name: 'Lemonade',
+            description: 'Handmade Lemonade',
+            price: 5.50,
+            cost: 1.50,
+          },
+        ]
+      }
     }
   })
 
@@ -58,7 +70,8 @@ const startSeeding = async () => {
   for(let i = 0; i < SALES_COUNT; i++) {
     sales.push(
       {
-        productId: productsIds[rand([0, 1])],
+        productId: productsIds[rand([0, 1, 2])],
+        count: rand([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
         salesDate: randBetweenDate({ from: new Date('01/01/2020'), to: new Date('03/01/2022')}).toISOString()
       }
     )
@@ -68,7 +81,7 @@ const startSeeding = async () => {
     data: sales
   })
 
-  console.info('Seeded!', admin, client, processedProducts, rawCategory, productsAdded)
+  console.info('Seeded!', admin, client, preparedSnacks, handmadeBeverages, productsAdded)
 }
 
 startSeeding()
