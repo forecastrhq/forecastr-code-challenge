@@ -37,7 +37,7 @@ This project uses the following technologies:
 - [Apollo GraphQL](https://www.apollographql.com/)
 - [Prisma](https://www.prisma.io/)
 
-Feel free to add any other library that will help you achieve your goal.
+Feel free to add any other libraries that will help you achieve your goal.
 
 Always remember to check the package.json file for extra scripts and libraries.
 
@@ -55,20 +55,22 @@ She asked her older brother, who is on the tech school, to build her a dashboard
 
 ### Context
 Lucy needs help building her Juice Vending Stop website, so she can control everything that goes in and out of the shop.
-Every product has a different cost of production. The local store that provides Lucy with her fruit needs will give her a discount based on the quantity of Juice she sells. If she sells more than 100, the vendor will give her a discount of 10%, if she sells more than 200, the discount will be 20%, up to 30% at 300+.
 
 To start her business, Lucy:
 - She borrowed $5,000 from her parents as seed money.
 - She pays $200/month to sell at the playground on weekdays.
 - She pays $50/day to sell at the farmers market on weekends.
 
-### What Lucy needs?
+Look up any other business concepts you think will be useful!
+
+
+### What does Lucy need?
 - The historic sales data has been imported, but Lucy would like to move to recording her sales through a web app.
 - Lucy would also like to add, delete, and manage her product catalog using the website.
 - Build Charts and Tables for Lucy to manage her daily sales.
 - Build a dynamic report for Lucy to present her revenue, expenses, and profit to her investor.
 - What insight can you give Lucy regarding her business? She's interested in hourly trends, performance over time, profit per day of week.
+- A more professional style and layout would inspire confidence in her investors, give your touch to it!
+- What else do you think Lucy will be happy to have?
 
-### Optional
-- The actual layout is not good, give your touch to it!
-- What else you find that Lucy will be happy to have?
+Choose and build solutions for 2 (or more) items on this list, depending on what strengths you want to show off. You will have a chance to tell us about additional work you would do with more time, so don’t feel like you have to do everything!
