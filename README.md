@@ -44,7 +44,7 @@ Always remember to check the package.json file for extra scripts and libraries.
 
 ## Challenge
 
-It was summer, and Lucy wanted a new toy, but she had no money to buy it. Lucy overheard her neighbors talking about how hot outside it was and how thirsty they had become.
+It was summer, and Lucy wanted a new toy, but she had no money to buy it. Lucy overheard her neighbors talking about how hot it was outside and how thirsty they had become.
 
 That conversation gave her the idea to start a Juice stand. Soon, everyone wanted to buy Lucy's products, but her business grew so much that she started having problems organizing it.
 
