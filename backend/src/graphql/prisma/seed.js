@@ -65,7 +65,7 @@ const startSeeding = async () => {
 
   const productsIds = allProducts.map(({ id }) => id)
 
-  const sales = Array(500)
+  const sales = []
 
   for(let i = 0; i < SALES_COUNT; i++) {
     sales.push(
