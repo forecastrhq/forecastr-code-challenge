@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@ngneat/falso": "^2.22.0",
-    "@prisma/client": "3.9.1",
+    "@prisma/client": "^3.10.0",
     "apollo-server-express": "^3.6.2",
     "cors": "^2.8.5",
     "express": "^4.17.2",

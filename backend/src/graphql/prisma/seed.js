@@ -1,5 +1,7 @@
-import { randEmail, randFirstName } from '@ngneat/falso';
+import { rand, randBetweenDate, randEmail, randFirstName } from '@ngneat/falso';
 import { PrismaClient } from '@prisma/client'
+
+const SALES_COUNT = 500
 
 const prisma = new PrismaClient();
 
@@ -47,7 +49,26 @@ const startSeeding = async () => {
     }
   })
 
-  console.info('Seeded!', admin, client, processedProducts, rawCategory)
+  const allProducts = await prisma.product.findMany()
+
+  const productsIds = allProducts.map(({ id }) => id)
+
+  const sales = Array(500)
+
+  for(let i = 0; i < SALES_COUNT; i++) {
+    sales.push(
+      {
+        productId: productsIds[rand([0, 1])],
+        salesDate: randBetweenDate({ from: new Date('01/01/2020'), to: new Date('03/01/2022')}).toISOString()
+      }
+    )
+  }
+
+  const productsAdded = await prisma.sales.createMany({
+    data: sales
+  })
+
+  console.info('Seeded!', admin, client, processedProducts, rawCategory, productsAdded)
 }
 
 startSeeding()
