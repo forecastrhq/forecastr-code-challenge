@@ -37,8 +37,23 @@ This project uses the following technologies:
 - [Apollo GraphQL](https://www.apollographql.com/)
 - [Prisma](https://www.prisma.io/)
 
-Feel free to add any other libraries that will help you achieve your goals.
+This project is made using the context pattern, here are some resources you may find helpful.
+- https://kentcdodds.com/blog/how-to-use-react-context-effectively
+- https://kentcdodds.com/blog/application-state-management-with-react
 
+Most of the relevant code for the context is in:
+- frontend/src/contexts/products_context/context_hook.js
+- frontend/src/contexts/products_context/reducer.js
+
+If you have a different preferred method to implement the requested features, feel free to use those instead.
+
+Other key files:
+- Data model is in backend/prisma/schema.prisma
+- Server endpoints are in src/schema/queries and src/schema/mutations
+- React app landing page is in frontend/src/App.js
+
+
+Feel free to add any other libraries (such as charting or table libraries) that will help you achieve your goals.
 Always remember to check the package.json file for extra scripts and libraries.
 
 
@@ -48,7 +63,7 @@ It was summer, and Lucy wanted a new toy, but she had no money to buy it. Lucy o
 
 That conversation gave her the idea to start a Juice stand. Soon, everyone wanted to buy Lucy's products, but her business grew so much that she started having problems organizing it.
 
-Your goal is to help Lucy organize her business. She asked her older brother to build her a dashboard so she could analyze her business, but he only had time to make basic funcionality for his sister. That's where you come in!
+Your goal is to help Lucy organize her business. She asked her friend to build her a dashboard so she could analyze her business, but they only had time to make basic funcionality for Lucy. That's where you come in!
 
 ### Context
 Lucy needs help building her website so she can control everything that goes in and out of the shop.
