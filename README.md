@@ -37,6 +37,12 @@ This project uses the following technologies:
 - [Apollo GraphQL](https://www.apollographql.com/)
 - [Prisma](https://www.prisma.io/)
 
+These are some key files you should check out:
+- Data model: backend/prisma/schema.prisma
+- Server endpoints: src/schema/queries and src/schema/mutations
+- React app landing page: frontend/src/App.js
+
+
 This project is made using the context pattern, here are some resources you may find helpful.
 - https://kentcdodds.com/blog/how-to-use-react-context-effectively
 - https://kentcdodds.com/blog/application-state-management-with-react
@@ -46,12 +52,6 @@ Most of the relevant code for the context is in:
 - frontend/src/contexts/products_context/reducer.js
 
 If you have a different preferred method to implement the requested features, feel free to use those instead.
-
-Other key files:
-- Data model is in backend/prisma/schema.prisma
-- Server endpoints are in src/schema/queries and src/schema/mutations
-- React app landing page is in frontend/src/App.js
-
 
 Feel free to add any other libraries (such as charting or table libraries) that will help you achieve your goals.
 Always remember to check the package.json file for extra scripts and libraries.
