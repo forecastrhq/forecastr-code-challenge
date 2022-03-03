@@ -85,3 +85,5 @@ Look up any other business concepts you think will be useful!
 - What else do you think Lucy would be happy to have?
 
 Choose and build solutions for 2 (or more) items on this list, depending on what skills you want to show off. You will have a chance to tell us about additional work that you would do given more time, so don’t feel like you have to do everything. This should be 6-8 hours of total effort.
+
+Copyright © 2022 Forecastr Inc. All Rights Reserved.
