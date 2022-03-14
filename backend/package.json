@@ -4,11 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "mkdir dist && babel src -s -d dist",
+    "serve": "node dist/index.js",
     "dev": "nodemon -L --exec babel-node src/index.js",
     "generate": "prisma generate",
     "migrate": "prisma migrate dev --name init",
+    "db-push": "prisma db push --preview-feature",
     "setup": "run-s generate migrate",
-    "reset": "prisma migrate reset"
+    "reset": "prisma migrate reset",
+    "start": "run-s setup dev",
+    "dev:heroku": "babel-node src/index.js",
+    "heroku-postbuild": "npm run db-push && npm run build && prisma db seed"
   },
   "prisma": {
     "seed": "babel-node src/graphql/prisma/seed.js"
